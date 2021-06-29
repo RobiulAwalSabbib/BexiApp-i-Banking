@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BenificierCreateActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Benificier Create Screen"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:background="#D57878"/>
+
+    <EditText
+        android:id="@+id/et_benificier_info_custID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Cust Id"/>
+
+    <EditText
+        android:id="@+id/et_benificier_info_accno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Cust Id"/>
+    <EditText
+        android:id="@+id/et_benificier_info_accType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Cust Id"/>
+    <EditText
+        android:id="@+id/et_benificier_info_accTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Cust Id"/>
+
+    <Button
+        android:id="@+id/btn_benificier_info_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:layout_gravity="center"/>
+
+
+
+</LinearLayout>

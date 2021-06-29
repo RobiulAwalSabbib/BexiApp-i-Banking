@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopupRequestActivity"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TopUp Screen"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:textColor="#085171"/>
+
+    <EditText
+        android:id="@+id/et_MOBILE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Enter MOBILE"
+        android:textColorHint="#085171"/>
+
+    <EditText
+        android:id="@+id/et_OPERATORS_CODE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Enter OPERATORS_CODE"
+        android:textColorHint="#085171"/>
+
+    <EditText
+        android:id="@+id/et_SIM_TYPE_NAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Enter SIM_TYPE_NAME."
+        android:textColorHint="#085171"/>
+
+    <EditText
+        android:id="@+id/et_AMOUNT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:hint="Enter AMOUNT"
+        android:textColorHint="#085171"/>
+
+    <EditText
+        android:id="@+id/et_RECHARGE_CODE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:hint="Enter RECHARGE_CODE"
+        android:textColorHint="#085171"/>
+
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Transaction Type :"
+        android:textColor="#038EF6"/>
+
+    <Spinner
+        android:visibility="gone"
+        android:id="@+id/sp_transction_medium"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"/>
+
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Transaction Medium :"
+        android:textColor="#038EF6"/>
+    <Spinner
+        android:visibility="gone"
+        android:id="@+id/sp_transction_type"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"/>
+
+
+
+
+        <Button
+            android:id="@+id/btn_topup_request_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Send\n Request"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInActivity"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bcl">
+
+        </ImageView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_logontoaacount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#2196F3"
+            android:textStyle="bold"
+            android:text="Login to account">
+
+        </TextView>
+
+
+        <EditText
+            android:id="@+id/et_user_log"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:inputType="text"
+            android:drawableRight="@drawable/ic_baseline_person_24"
+            android:hint="User id" />
+
+        <EditText
+            android:id="@+id/et_pass_log"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:inputType="textPassword"
+            android:drawableRight="@drawable/ic_baseline_security_24"
+            android:hint="Password" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center|top"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btn_login_log"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#2196F3"
+            android:text="Login" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F44336"
+                android:text="Not Register? "
+                android:layout_weight="1"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2196F3"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                 />
+            <TextView
+                android:id="@+id/tv_reg_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2196F3"
+                android:textStyle="bold"
+                android:text="Click Here To Register Now."
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

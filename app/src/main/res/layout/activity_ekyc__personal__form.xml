@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ekyc.Ekyc_Personal_Form_Activity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Application For Account Opening"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:textStyle="italic"
+                    android:textColor="#3F4BB5"/>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_nid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="National ID"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Name"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Date of Birth"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_father_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Father Name"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_mother_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Mother Name"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_spouse_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Spouse Name"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_contact_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Contact Number"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Gender"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_religion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Religion"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_monthly_income"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Monthly Income"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_present_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Present Address"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_permanent_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Permanent Address"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/rg_ekyc_applicant_busines_address">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Want Add Business Address ?"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"/>
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"/>
+
+
+                </RadioGroup>
+
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/rg_ekyc_applicant_mailing_address">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mailing Address"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Present"/>
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Permanent"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Business"/>
+
+
+                </RadioGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_email_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Email Address"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_source_of_fund"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Source Of Fund"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_profession"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Profession"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:hintTextColor="@color/purple_200">
+
+                    <EditText
+                        android:id="@+id/et_ekyc_applicant_nationality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="Applicant Nationality"
+                        android:textSize="22dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/btn_ekyc_personal_info_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#3F51B5"
+                    android:text="Next--->"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="20dp"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

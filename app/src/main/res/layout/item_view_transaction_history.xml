@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+
+
+        <TextView
+            android:id="@+id/et_transaction_history_sl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SL No"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/et_transaction_history_tranno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Transaction No"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/et_transaction_history_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Date"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/et_transaction_history_fromacc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="From Account"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/et_transaction_history_tranmedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Transaction Medium" />
+
+        <TextView
+            android:id="@+id/et_transaction_history_trantype"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Transaction Type"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/et_transaction_history_tranamt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Transaction Amount"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/et_transaction_history_toacc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="To Account"
+            android:gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/et_transaction_history_oldbal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Old Balance"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/et_transaction_history_newbal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New Balance"
+            android:gravity="center"/>
+
+
+
+
+
+</LinearLayout>

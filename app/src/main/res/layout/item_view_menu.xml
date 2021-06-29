@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:id="@+id/llo_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="SL : "
+                android:layout_weight="1"/>
+
+               <TextView
+                   android:id="@+id/et_menu_sl"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:textSize="18sp"
+
+                   android:layout_weight="1"/>
+
+           </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Unit Type : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_unittype"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Menu Code : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_menucode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Parent Code : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_parentcode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Description : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Web Service Name : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_webservicename"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Web  Parm Mob No : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_webparmemobno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Web  Parm To Acc No : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_webparmtoaccno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Web  Parm Tran Amount : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_webparmtranamount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Web  Parm Pin No : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_webparmpinno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Menu Action Name : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_menuactionname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Perm Add : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_permadd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Perm Modify : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_permmodify"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Perm Delete : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_permdelete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Perm View : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_permview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Create Code : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_createdcode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Create Date : "
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/et_menu_createddate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

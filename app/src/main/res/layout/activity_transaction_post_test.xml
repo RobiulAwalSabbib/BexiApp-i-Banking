@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionPostTestActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Transaction Screen"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:textColor="#085171"/>
+
+    <EditText
+        android:id="@+id/et_sender_acc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Your A/C No"
+        android:textColorHint="#085171"/>
+
+    <EditText
+        android:id="@+id/et_receiver_acc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Receiver A/C No"
+        android:textColorHint="#085171"/>
+
+    <EditText
+        android:id="@+id/et_transaction_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Transaction Amount in TK."
+        android:textColorHint="#085171"/>
+
+    <EditText
+        android:id="@+id/et_transaction_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:hint="Enter Transaction Medium"
+        android:textColorHint="#085171"/>
+
+    <EditText
+        android:id="@+id/et_transaction_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:hint="Enter Transaction Type"
+        android:textColorHint="#085171"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Transaction Type :"
+        android:textColor="#038EF6"/>
+
+    <Spinner
+        android:id="@+id/sp_transction_medium"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Transaction Medium :"
+        android:textColor="#038EF6"/>
+    <Spinner
+        android:id="@+id/sp_transction_type"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_transaction_post"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Send\n Money"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <Button
+            android:id="@+id/btn_transaction_detail_get"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="View All\n Transaction"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

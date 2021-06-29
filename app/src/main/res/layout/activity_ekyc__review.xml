@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ekyc.Ekyc_Review_Activity"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:id="@+id/tv_introinfo_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#47A3EC"
+                    android:textSize="22dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:text="Account Opening Form For (Individual)">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_appid_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Application ID:"/>
+
+                <TextView
+                    android:id="@+id/tv_appname_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Applicant Name:"/>
+
+                <TextView
+                    android:id="@+id/tv_appname_bng_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Applicant Name(Bangla):"/>
+
+                <TextView
+                    android:id="@+id/tv_dob_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Date of Birth:"/>
+
+                <TextView
+                    android:id="@+id/tv_nid_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="NID/Smart Card:"/>
+
+                <TextView
+                    android:id="@+id/tv_accrlt_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textColor="#D704FB"
+                    android:text="Account Related Information:"/>
+
+
+                <TextView
+                    android:id="@+id/tv_acctype_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Account Type"/>
+
+                <TextView
+                    android:id="@+id/tv_branch_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Branch Name:"/>
+
+                <TextView
+                    android:id="@+id/tv_currency_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Currency:"/>
+
+                <TextView
+                    android:id="@+id/tv_typeacc_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Type of A/c:"/>
+
+                <TextView
+                    android:id="@+id/tv_addservice_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textColor="#D704FB"
+                    android:text="Additional Service:"/>
+
+                <TextView
+                    android:id="@+id/tv_chqbk_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Cheque Book :"/>
+                <TextView
+                    android:id="@+id/tv_debitc_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Debit Card:"/>
+
+                <TextView
+                    android:id="@+id/tv_smsalart_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="SMS Alert :"/>
+                <TextView
+                    android:id="@+id/tv_digtalb_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Digital Banking:"/>
+                <TextView
+                    android:id="@+id/tv_intldps_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="E-Statement :"/>
+                <TextView
+                    android:id="@+id/tv_prcinfo_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textColor="#D704FB"
+                    android:text="Personal Information:"/>
+
+                <TextView
+                    android:id="@+id/tv_tin_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Tin:"/>
+                <TextView
+                    android:id="@+id/tv_gender_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Gender:"/>
+                <TextView
+                    android:id="@+id/tv_religion_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Religion:"/>
+                <TextView
+                    android:id="@+id/tv_nationality_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Nationality:"/>
+
+                <TextView
+                    android:id="@+id/tv_mobile_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Mobile NO:"/>
+                <TextView
+                    android:id="@+id/tv_email_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Email Id:"/>
+
+                <TextView
+                    android:id="@+id/tv_fname_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Father Name:"/>
+                <TextView
+                    android:id="@+id/tv_mname_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Mother Name:"/>
+
+                <TextView
+                    android:id="@+id/tv_sname_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Spouse Name:"/>
+                <TextView
+                    android:id="@+id/tv_maddress_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Mailling Add:"/>
+                <TextView
+                    android:id="@+id/tv_appaddress_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textColor="#D704FB"
+                    android:text="Applicant Address"/>
+
+                <TextView
+                    android:id="@+id/tv_addtype_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/purple_200"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:text="Address Type:"/>
+                <TextView
+                    android:id="@+id/tv_preadd_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Present Address:"/>
+                <TextView
+                    android:id="@+id/tv_paradd_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Permanent Address:"/>
+
+                <TextView
+                    android:id="@+id/tv_intinfo_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textColor="#D704FB"
+                    android:text="Introducer Information:"/>
+
+                <TextView
+                    android:id="@+id/tv_intname_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Name:"/>
+                <TextView
+                    android:id="@+id/tv_intacc_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Account No:"/>
+                <TextView
+                    android:id="@+id/tv_intmbl_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="Mobile No:"/>
+                <TextView
+                    android:id="@+id/tv_intnid_ekyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="NID/Smart Card:"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center|top"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_finish_ekyc"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="#2196F3"
+                        android:text="Finish">
+
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

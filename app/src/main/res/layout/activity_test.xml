@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Table AG_CUSTOMER"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:textColor="#056355"
+                android:textStyle="italic"/>
+
+
+            <EditText
+                android:id="@+id/et_AG_CUSTOMER_CUST_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Customer ID"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/et_AG_CUSTOMER_CUST_NAME"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Customer Name"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/et_AG_CUSTOMER_CUST_GENDER"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Customer Gender"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/et_AG_CUSTOMER_CUST_DOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Customer Date of Birth"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btn_AG_CUSTOMER_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Submit"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+                <Button
+                    android:id="@+id/btn_AG_CUSTOMER_get"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="View"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Table AG_ADDRESS"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:textColor="#056355"
+                android:textStyle="italic"/>
+
+
+            <EditText
+                android:id="@+id/et_AG_ADDRESS_CUST_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Customer ID"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/et_AG_ADDRESS_PRESENT_ADDRESS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Present Address"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/et_AG_ADDRESS_PERMANENT_ADDRESS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Permanent Address"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btn_AG_ADDRESS_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Submit"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+                <Button
+                    android:id="@+id/btn_AG_ADDRESS_get"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="View"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Table AG_DOCUMENT"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:textColor="#056355"
+                android:textStyle="italic"/>
+
+
+
+            <EditText
+                android:id="@+id/et_AG_DOCUMENT_CUST_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Customer ID"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/et_AG_DOCUMENT_DOCUMENT_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Document ID"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/et_AG_DOCUMENT_DOCUMENT_TYPE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Document Type"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/et_AG_DOCUMENT_DOCUMENT_STATUS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Document Status"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/et_AG_DOCUMENT_DOCUMENT_CONTENT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Document Content"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btn_AG_DOCUMENT_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Submit"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+                <Button
+                    android:id="@+id/btn_AG_DOCUMENT_get"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="View"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileUploadActivity"
+    android:orientation="vertical"
+    android:gravity="center_vertical|center_horizontal">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtIdLyt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/edtId"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F2352F"
+            android:hint="User Id"
+            android:text="1234"
+            android:inputType="textPersonName"
+            android:textColorHint="@android:color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_baseline_person_24">
+
+    </ImageView>
+
+    <Button
+        android:id="@+id/btn_cap"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Capture Profile Pic"
+        />
+
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Choose Gullery Pic"
+        />
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        />
+
+    <Button
+        android:id="@+id/btn_load"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Get Image From DB"
+        />
+
+
+</LinearLayout>
