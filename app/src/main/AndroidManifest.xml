@@ -26,7 +26,8 @@
         <activity android:name=".ProfileUploadActivity" />
         <activity android:name=".UserDbViewAllDataActivity" />
         <activity android:name=".UserDbTestActivity" />
-        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".RegistrationActivity"
+            android:theme="@style/RegistrationActivityTheme"/>
         <activity android:name=".LogInActivity" />
         <activity android:name=".TopupRequestActivity" />
         <activity android:name=".BenificierEntryActivity" />
