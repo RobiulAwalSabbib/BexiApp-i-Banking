@@ -11,6 +11,7 @@ import com.bcl.bexiapp_i_banking.Transaction_History_Get.Single_Account_DateRang
 import com.bcl.bexiapp_i_banking.Transaction_Medium_Get_All_Data.Transaction_Medium_Get_All_Data_Return_M;
 import com.bcl.bexiapp_i_banking.Transaction_Post.Transaction_Post_Receive_Model;
 import com.bcl.bexiapp_i_banking.Transaction_Type_Get_All_Data.Transaction_Type_Get_All_Data_Return_M;
+import com.bcl.bexiapp_i_banking.customer_registration_post.Customer_Registration_Receive_Model;
 import com.bcl.bexiapp_i_banking.image_upload.ProfileUploadDataM;
 
 import java.util.List;
@@ -193,5 +194,18 @@ public interface ApiService {
 //    Single<ProfileUploadDataM> getImage(
 //            @Field("id") String id
 //    );
+
+
+    @FormUrlEncoded
+    @POST("Customer_Registration_Api")
+    Single<Customer_Registration_Receive_Model> postCustomerRegistration(
+
+            @Field("applicant_name") String applicant_name,
+            @Field("mobile") String mobile,
+            @Field("email") String email,
+            @Field("dob") String dob,
+            @Field("passwords") String passwords,
+            @Field("confirm_passwords") String confirm_passwords
+    );
 
 }
