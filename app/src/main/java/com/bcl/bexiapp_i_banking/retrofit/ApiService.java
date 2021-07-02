@@ -5,6 +5,8 @@ import com.bcl.bexiapp_i_banking.AG_CUSTOMER.AGCustomerRecM;
 import com.bcl.bexiapp_i_banking.Benificier_Info_Post.ReturnModel;
 import com.bcl.bexiapp_i_banking.Login.LoginDataM;
 import com.bcl.bexiapp_i_banking.Menu_Get.ReceiveModel;
+import com.bcl.bexiapp_i_banking.Post_User_Info.UserInfo_Receive_Model;
+import com.bcl.bexiapp_i_banking.Post_User_Info.UserInfo_Request_Model;
 import com.bcl.bexiapp_i_banking.TopUp_Request_Post.Recharge_Request_Post_Receive_Data_Model;
 import com.bcl.bexiapp_i_banking.TranDetail_Get.StatementReceiveModel;
 import com.bcl.bexiapp_i_banking.Transaction_History_Get.Single_Account_DateRange_Record_Receive_Model;
@@ -206,6 +208,14 @@ public interface ApiService {
             @Field("dob") String dob,
             @Field("passwords") String passwords,
             @Field("confirm_passwords") String confirm_passwords
+    );
+
+    @FormUrlEncoded
+    @POST("Create_Customer_Api")
+    Single<UserInfo_Receive_Model> postUserInfoRegistration(
+
+            @Field("custid") String custid,
+            @Field("dob") String dob
     );
 
 }

@@ -25,6 +25,8 @@ import android.widget.QuickContactBadge;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.bcl.bexiapp_i_banking.Post_User_Info.UserInfo_Receive_Model;
+import com.bcl.bexiapp_i_banking.Post_User_Info.UserInfo_Request_Model;
 import com.bcl.bexiapp_i_banking.TopUp_Request_Post.Recharge_Request_Post_Receive_Data_Model;
 import com.bcl.bexiapp_i_banking.TopUp_Request_Post.Recharge_Request_Post_Request_Data_Model;
 import com.bcl.bexiapp_i_banking.customView.CustomAlert;
@@ -47,7 +49,7 @@ public class RegistrationActivity extends AppCompatActivity {
     TextView tv_goto_loginActivity;
     RadioGroup rg_registration_acNo;
 
-    EditText et_name_reg,et_mobile_reg,et_email_reg,et_dob_reg,et_password_reg,et_confirmPassword_reg,et_ac_no_reg,et_password_reg_1;
+    EditText et_name_reg,et_mobile_reg,et_email_reg,et_dob_reg,et_password_reg,et_confirmPassword_reg,et_ac_no_reg,et_dob_reg_1;
     Button btn_reg_reg,btn_reg_reg_1;
 
     // notification manager
@@ -79,7 +81,7 @@ public class RegistrationActivity extends AppCompatActivity {
         et_password_reg = findViewById(R.id.et_password_reg);
         et_confirmPassword_reg = findViewById(R.id.et_confirmPassword_reg);
         et_ac_no_reg = findViewById(R.id.et_ac_no_reg);
-        et_password_reg_1 = findViewById(R.id.et_password_reg_1);
+        et_dob_reg_1 = findViewById(R.id.et_dob_reg_1);
 
         btn_reg_reg = findViewById(R.id.btn_reg_reg);
         btn_reg_reg_1 = findViewById(R.id.btn_reg_reg_1);
@@ -135,7 +137,7 @@ public class RegistrationActivity extends AppCompatActivity {
         });
 
 
-////////////////////////////////// Post New Registration ////////////////////////////////////////
+////////////////////////////////// Post New Registration  ////////////////////////////////////////
         btn_reg_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -200,6 +202,39 @@ public class RegistrationActivity extends AppCompatActivity {
 
             }
         });
+
+
+        ////////////////////////////////// Post New Registration single using account number and dob ////////////////////////////////////////
+        btn_reg_reg_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String acno = et_ac_no_reg.getText().toString();
+                String dob = et_dob_reg_1.getText().toString();
+
+                if(acno.isEmpty()){
+                    et_ac_no_reg.setError("Please Enter Customer Number first!");
+                    et_ac_no_reg.requestFocus();
+                }else if(dob.isEmpty()){
+
+                    et_dob_reg_1.setError("Please Enter Your DOB first!");
+                    et_dob_reg_1.requestFocus();
+
+
+                }else{
+
+                    UserInfo_Request_Model reqM = new UserInfo_Request_Model();
+                    reqM.setCustid(acno);
+                    reqM.setDob(dob);
+
+                    pDialog.show();
+                    post_User_Info(reqM);
+
+                }
+
+            }
+        });
+
 
     }
 
@@ -314,6 +349,73 @@ public class RegistrationActivity extends AppCompatActivity {
                                 } else {
                                     //Failed
                                     new CustomAlert().showErrorMessage(RegistrationActivity.this, "", recM.getpErrorMessage());
+                                }
+
+                            }
+
+                            @Override
+                            public void onError(Throwable e) {
+                                pDialog.dismiss();
+
+                                // Log.e(TAG, "onError: " + e.getMessage());
+                                ErrorUtil.showError(e, RegistrationActivity.this);
+                            }
+                        }));
+
+
+
+    }
+
+
+    ///////////////////////////////////// Post User Info ////////////////////////////////////////////////
+
+    private void post_User_Info( UserInfo_Request_Model reqM ){
+
+        disposable.add(
+                (Disposable) apiService
+
+                        //change 1
+                        .postUserInfoRegistration(reqM.getCustid(),
+                                reqM.getDob())
+
+
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribeWith(new DisposableSingleObserver<UserInfo_Receive_Model>() {//change 2
+                            @Override
+                            public void onSuccess( UserInfo_Receive_Model recM ) {//change 3
+
+                                pDialog.dismiss();
+
+                                //change 4
+                                //Receive   Result
+                                if (recM.pErrorFlag.equals("N")) {
+                                    //Successful
+//
+//                                    Notification notification = new NotificationCompat.Builder(RegistrationActivity.this, CHANNEL_1_ID)
+//                                            .setSmallIcon(R.drawable.alert_icon)
+//                                            .setContentTitle(recM.getpErrorFlag())
+//                                            .setContentText(recM.getpErrorMessage())
+//                                            .setPriority(NotificationCompat.PRIORITY_HIGH)
+//                                            .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+//                                            .build();
+//                                    notificationManager.notify(1, notification);
+
+
+//                                    session.edit().putString("user_id", reqM.getUser_id()).commit();
+//                                    session.edit().putString("session_id", "039248098").commit();
+//                                    session.edit().putString("user_type", "ADMIN").commit();
+//                                    session.edit().putString("user_mobile", "093284098").commit();
+//                                    session.edit().putString("user_name", loginResult.user_name).commit();
+
+                                    new CustomAlert().showSuccessMessage(RegistrationActivity.this, "", recM.pErrorMessage);
+                                    //Intent intent = new Intent(NavigationDrawer.this, Dashboard2.class);
+//                                    intent.putExtra("id", reqM.getUser_id());
+//                                    intent.putExtra("pass", reqM.getUser_password());
+                                    // startActivity(intent);
+                                } else {
+                                    //Failed
+                                    new CustomAlert().showErrorMessage(RegistrationActivity.this, "", recM.pErrorMessage);
                                 }
 
                             }
