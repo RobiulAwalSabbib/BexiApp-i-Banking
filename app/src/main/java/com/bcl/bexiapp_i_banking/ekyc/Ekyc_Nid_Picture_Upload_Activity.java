@@ -23,6 +23,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bcl.bexiapp_i_banking.R;
+import com.bcl.bexiapp_i_banking.TopupRequestActivity;
+import com.bcl.bexiapp_i_banking.customView.CustomAlert;
 import com.bcl.bexiapp_i_banking.image_upload.ImageUtil;
 
 public class Ekyc_Nid_Picture_Upload_Activity extends AppCompatActivity {
@@ -65,8 +67,12 @@ public class Ekyc_Nid_Picture_Upload_Activity extends AppCompatActivity {
         btn_ekyc_nid_picture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Ekyc_Nid_Picture_Upload_Activity.this, Ekyc_Nominee_Information_Activity.class);
-                startActivity(intent);
+                if(imageString1==""){
+                    new CustomAlert().showErrorMessage(Ekyc_Nid_Picture_Upload_Activity.this, "", "Please select an Image");
+                }else {
+                    Intent intent = new Intent(Ekyc_Nid_Picture_Upload_Activity.this, Ekyc_Nominee_Information_Activity.class);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -153,6 +159,8 @@ public class Ekyc_Nid_Picture_Upload_Activity extends AppCompatActivity {
                         }catch(Exception e){
                             Log.e("Error", e.toString());
                         }
+
+                        Log.e("Image", imageString1);
 
                     }
                 }else  if(requestCode == IMAGE_CAP_CODE2){

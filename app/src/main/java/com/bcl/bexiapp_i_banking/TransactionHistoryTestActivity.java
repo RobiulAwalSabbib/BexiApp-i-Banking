@@ -80,6 +80,7 @@ public class TransactionHistoryTestActivity extends AppCompatActivity {
                 String accno = et_transaction_history_accno.getText().toString();
                 String fdate = et_transaction_history_fromdate.getText().toString();
                 String tdate = et_transaction_history_todate.getText().toString();
+                recyclerView.setVisibility(View.VISIBLE);
 
                 if(accno.isEmpty()){
 
@@ -151,6 +152,18 @@ public class TransactionHistoryTestActivity extends AppCompatActivity {
 
                                 } else {
                                     //Successful
+
+                                    try {
+
+                                        dataModels.clear();
+                                        dataModels = new ArrayList<>();
+
+
+                                    }catch (Exception e){
+
+                                    }
+
+
 
                                     for(int i=0; i < recM.size(); i++ ){
 

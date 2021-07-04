@@ -25,21 +25,43 @@
         android:hint="Enter MOBILE"
         android:textColorHint="#085171"/>
 
-    <EditText
-        android:id="@+id/et_OPERATORS_CODE"
+    <TextView
+        android:id="@+id/tv_OPERATORS_CODE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:hint="Enter OPERATORS_CODE"
-        android:textColorHint="#085171"/>
+        android:text="Select Operators"
 
-    <EditText
+        android:textColor="#EC072A"
+
+        />
+
+
+    <Spinner
+        android:id="@+id/sp_OPERATORS_CODE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown">
+
+    </Spinner>
+
+
+    <TextView
         android:id="@+id/et_SIM_TYPE_NAME"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:hint="Enter SIM_TYPE_NAME."
-        android:textColorHint="#085171"/>
+        android:hint="Select SIM TYPE."
+        android:textColorHint="#EC072A"
+        android:textColor="#EC072A"/>
+
+    <Spinner
+        android:id="@+id/sp_SIM_TYPE_NAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown">
+
+    </Spinner>
 
     <EditText
         android:id="@+id/et_AMOUNT"

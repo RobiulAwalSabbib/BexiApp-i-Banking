@@ -106,6 +106,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     case R.id.menu_contact:
                         Toast.makeText(getApplicationContext(),"contact is here",Toast.LENGTH_LONG).show();
                         drawerLayout.closeDrawer(GravityCompat.START);
+                        intent = new Intent(getApplicationContext(),BenificierCreateActivity.class);
+                        startActivity(intent);
+
                         break;
 
                     case R.id.menu_setting:

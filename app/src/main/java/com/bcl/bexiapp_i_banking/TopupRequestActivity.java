@@ -14,8 +14,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.bcl.bexiapp_i_banking.TopUp_Request_Post.Recharge_Request_Post_Receive_Data_Model;
 import com.bcl.bexiapp_i_banking.TopUp_Request_Post.Recharge_Request_Post_Request_Data_Model;
@@ -40,6 +43,15 @@ public class TopupRequestActivity extends AppCompatActivity {
 
     EditText et_MOBILE,et_OPERATORS_CODE,et_SIM_TYPE_NAME,et_AMOUNT,et_RECHARGE_CODE;
     Button btn_topup_request_post;
+    Spinner sp_OPERATORS_CODE,sp_SIM_TYPE_NAME;
+
+    String [] opretor = {"Robi","Bangla-Link","Airtel","GramminPhone","TeleTalk"};
+    String [] simType = {"PostPaid","PrePaid"};
+
+    String v_operator = "";
+    String v_simType = "";
+
+
 
     //Network call
     private ApiService apiService;
@@ -57,10 +69,14 @@ public class TopupRequestActivity extends AppCompatActivity {
         notificationManager = NotificationManagerCompat.from(this);
 
         et_MOBILE = findViewById(R.id.et_MOBILE);
-        et_OPERATORS_CODE = findViewById(R.id.et_OPERATORS_CODE);
-        et_SIM_TYPE_NAME = findViewById(R.id.et_SIM_TYPE_NAME);
+//        et_OPERATORS_CODE = findViewById(R.id.et_OPERATORS_CODE);
+//        et_SIM_TYPE_NAME = findViewById(R.id.et_SIM_TYPE_NAME);
         et_AMOUNT = findViewById(R.id.et_AMOUNT);
         et_RECHARGE_CODE = findViewById(R.id.et_RECHARGE_CODE);
+
+        sp_OPERATORS_CODE = findViewById(R.id.sp_OPERATORS_CODE);
+        sp_SIM_TYPE_NAME = findViewById(R.id.sp_SIM_TYPE_NAME);
+
 
         btn_topup_request_post = findViewById(R.id.btn_topup_request_post);
 
@@ -71,15 +87,89 @@ public class TopupRequestActivity extends AppCompatActivity {
         pDialog.setMessage("Please waite..");
 
 
+        ////////////////////////////////// set operator spinner /////////////////////////////////
 
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<String> operatorAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, opretor);
+
+        // Specify the layout to use when the list of choices appears
+        operatorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Apply the adapter to the spinner
+        sp_OPERATORS_CODE.setAdapter(operatorAdapter);
+
+
+
+
+        sp_OPERATORS_CODE.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position == 0){
+                    showToast("Robi Selected");
+                    v_operator = "Robi";
+                }else if(position == 1){
+                    showToast("BangLalink Selected");
+                    v_operator = "BanglaLink";
+                }else if(position == 2) {
+                    showToast("Airtel Selected");
+                    v_operator = "Airtel";
+                }else if(position == 3) {
+                    showToast("GraminPhone Selected");
+                    v_operator = "GraminPhone";
+                }else if(position == 4) {
+                    showToast("TeleTalk Selected");
+                    v_operator = "TeleTalk";
+                }else{
+                    showToast("Nothign selected");
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        ////////////////////////////////// set Sim Type spinner /////////////////////////////////
+
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<String> simAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, simType);
+
+        // Specify the layout to use when the list of choices appears
+        simAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Apply the adapter to the spinner
+        sp_SIM_TYPE_NAME.setAdapter(simAdapter);
+
+
+
+
+        sp_SIM_TYPE_NAME.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position == 0){
+                    showToast("PostPaid Selected");
+                    v_simType = "PostPaid";
+                }else if(position == 1){
+                    showToast("BangLalink Selected");
+                    v_simType = "PrePaid";
+                   }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+////////////////////////////////////////////////////////////////////////////////////////////////
 
         btn_topup_request_post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 String MOBILE = et_MOBILE.getText().toString();
-                String OPERATORS_CODE = et_OPERATORS_CODE.getText().toString();
-                String SIM_TYPE_NAME = et_SIM_TYPE_NAME.getText().toString();
+                String OPERATORS_CODE = v_operator;
+                String SIM_TYPE_NAME = v_simType;
                 String AMOUNT = et_AMOUNT.getText().toString();
                 String RECHARGE_CODE = et_RECHARGE_CODE.getText().toString();
 
@@ -221,6 +311,8 @@ public class TopupRequestActivity extends AppCompatActivity {
     }
 
 
-
+    private void showToast(String message){
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
 
 }

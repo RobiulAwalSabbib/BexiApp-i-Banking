@@ -21,21 +21,33 @@
         android:layout_height="wrap_content"
         android:hint="Enter Cust Id"/>
 
-    <EditText
-        android:id="@+id/et_benificier_info_accno"
+    <TextView
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Cust Id"/>
+        android:text="Your Acc No :"
+        android:textColor="#BC4545"/>
     <EditText
-        android:id="@+id/et_benificier_info_accType"
+        android:id="@+id/tv_benificier_info_accno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Cust Id"/>
-    <EditText
-        android:id="@+id/et_benificier_info_accTitle"
+        android:hint="Enter Your Acc No"
+        android:textColor="#BC4545"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
+    <Spinner
+        android:id="@+id/sp_benificier_info_accType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Cust Id"/>
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_marginTop="10dp"/>
+
+    <Spinner
+        android:id="@+id/sp_benificier_info_accTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:layout_marginTop="10dp"/>
 
     <Button
         android:id="@+id/btn_benificier_info_post"

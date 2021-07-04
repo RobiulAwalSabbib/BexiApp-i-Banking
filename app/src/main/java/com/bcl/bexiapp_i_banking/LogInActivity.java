@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -39,10 +40,14 @@ public class LogInActivity extends AppCompatActivity {
     private CompositeDisposable disposable = new CompositeDisposable();
     private ProgressDialog pDialog;
 
+    SharedPreferences session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+
+        session = getSharedPreferences("app_session", MODE_PRIVATE);
 
         et_user_log = findViewById(R.id.et_user_log);
         et_pass_log = findViewById(R.id.et_pass_log);
@@ -116,15 +121,15 @@ public class LogInActivity extends AppCompatActivity {
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribeWith(new DisposableSingleObserver<LoginDataM>() {//change 2
                             @Override
-                            public void onSuccess(LoginDataM loginResult) {//change 3
+                            public void onSuccess(LoginDataM receiveM) {//change 3
 
                                 pDialog.dismiss();
 
                                 //change 4
                                 //Login Result
-                                if (loginResult.pErrorFlag.equals("N")) {
+                                if (receiveM.getpErrorFlag().equals("N")) {
                                     //Successful
-//                                    session.edit().putString("user_id", reqM.getUser_id()).commit();
+                                    session.edit().putString("acNo", receiveM.getAcNo()).apply();
 //                                    session.edit().putString("session_id", "039248098").commit();
 //                                    session.edit().putString("user_type", "ADMIN").commit();
 //                                    session.edit().putString("user_mobile", "093284098").commit();
@@ -137,7 +142,7 @@ public class LogInActivity extends AppCompatActivity {
                                     startActivity(intent);
                                 } else {
                                     //Failed
-                                    new CustomAlert().showErrorMessage(LogInActivity.this, "", loginResult.pErrorMessage);
+                                    new CustomAlert().showErrorMessage(LogInActivity.this, "", receiveM.getpErrorMessage());
                                 }
 
                             }

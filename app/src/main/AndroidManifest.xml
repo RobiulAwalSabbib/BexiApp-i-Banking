@@ -26,6 +26,7 @@
         <activity android:name=".ProfileUploadActivity" />
         <activity android:name=".UserDbViewAllDataActivity" />
         <activity android:name=".UserDbTestActivity" />
+        <activity android:name=".BillPayActivity"/>
         <activity android:name=".RegistrationActivity"
             android:theme="@style/RegistrationActivityTheme"/>
         <activity android:name=".LogInActivity" />

@@ -22,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Enter Your A/C No"
-        android:textColorHint="#085171"/>
+        android:textColorHint="#085171"
+        />
 
     <EditText
         android:id="@+id/et_receiver_acc"
@@ -30,7 +31,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Enter Receiver A/C No"
-        android:textColorHint="#085171"/>
+        android:textColorHint="#085171"
+        android:visibility="gone"/>
+
+    <Spinner
+        android:id="@+id/sp_receiver_acc"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"/>
+
 
     <EditText
         android:id="@+id/et_transaction_amount"

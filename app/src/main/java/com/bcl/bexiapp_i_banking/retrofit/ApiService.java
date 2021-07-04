@@ -13,6 +13,10 @@ import com.bcl.bexiapp_i_banking.Transaction_History_Get.Single_Account_DateRang
 import com.bcl.bexiapp_i_banking.Transaction_Medium_Get_All_Data.Transaction_Medium_Get_All_Data_Return_M;
 import com.bcl.bexiapp_i_banking.Transaction_Post.Transaction_Post_Receive_Model;
 import com.bcl.bexiapp_i_banking.Transaction_Type_Get_All_Data.Transaction_Type_Get_All_Data_Return_M;
+import com.bcl.bexiapp_i_banking.billpay.BillPayRecM;
+import com.bcl.bexiapp_i_banking.billpay.BillPay_Acc_RcvM;
+import com.bcl.bexiapp_i_banking.billpay.BillPay_Operator_RecM;
+import com.bcl.bexiapp_i_banking.billpay.BillPay_Operator_Type_RcvM;
 import com.bcl.bexiapp_i_banking.customer_registration_post.Customer_Registration_Receive_Model;
 import com.bcl.bexiapp_i_banking.image_upload.ProfileUploadDataM;
 
@@ -217,5 +221,56 @@ public interface ApiService {
             @Field("custid") String custid,
             @Field("dob") String dob
     );
+
+    @FormUrlEncoded
+    @POST("BillPayApi")
+    Single<BillPayRecM> billpay(
+            @Field("acc_no") String acc_no,
+            @Field("mobile_no") String mobile_no,
+            @Field("billpay__name") String billpay__name,
+            @Field("billpay_type") String billpay_type,
+            @Field("bill_no") String bill_no,
+            @Field("meter_no") String meter_no,
+            @Field("amount") String amount,
+            @Field("pin") String pin
+    );
+
+    @POST("BillPay_Operator_Api")
+    Single<List<BillPay_Operator_RecM>> billpayoperator(
+    );
+
+    @POST("BillPay_Operator_Type_Api")
+    Single<List<BillPay_Operator_Type_RcvM>> billpayoperatortype(
+
+    );
+
+    @POST("BillPay_AccApi")
+    Single<List<BillPay_Acc_RcvM>> billpayacc(
+
+    );
+
+
+
+
+    @FormUrlEncoded
+    @POST("Benificiary_Info_Post_Api")
+    Single<ReturnModel> post_Benificiary_Info(
+
+            @Field("cust_id") String cust_id,
+            @Field("acc_no") String acc_no,
+            @Field("acc_type") String acc_type,
+            @Field("acc_title") String acc_title
+    );
+
+
+    @FormUrlEncoded
+    @POST("Benificiary_Single_Account_Get_Api")
+    Single<List<com.bcl.bexiapp_i_banking.Benificier_Single_Account_Get.ReceiveModel>> get_Benificiary_Single_Acc(
+
+            @Field("acNo") String acNo
+    );
+
+
+
 
 }

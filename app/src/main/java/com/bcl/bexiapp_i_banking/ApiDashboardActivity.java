@@ -189,7 +189,38 @@ public class ApiDashboardActivity extends AppCompatActivity implements MenuAdapt
             intent = new Intent(ApiDashboardActivity.this,TopupRequestActivity.class);
             startActivity(intent);
 
+        }else if(dataModels.get(position).getSL_NO().equals("21")){
+
+            intent = new Intent(ApiDashboardActivity.this,BillPayActivity.class);
+            startActivity(intent);
+        }else if(dataModels.get(position).getSL_NO().equals("22")){
+
+            intent = new Intent(ApiDashboardActivity.this,BillPayActivity.class);
+            startActivity(intent);
+        }else if(dataModels.get(position).getSL_NO().equals("23")){
+
+            intent = new Intent(ApiDashboardActivity.this,BillPayActivity.class);
+            startActivity(intent);
+        }else if(dataModels.get(position).getSL_NO().equals("40")){
+
+            intent = new Intent(ApiDashboardActivity.this,BenificierCreateActivity.class);
+            startActivity(intent);
+
+        }else if(dataModels.get(position).getSL_NO().equals("25")){
+
+            intent = new Intent(ApiDashboardActivity.this,BillPayActivity.class);
+            startActivity(intent);
+        }else if(dataModels.get(position).getSL_NO().equals("16")){
+
+            intent = new Intent(ApiDashboardActivity.this,TransactionPostTestActivity.class);
+            startActivity(intent);
+        }else if(dataModels.get(position).getSL_NO().equals("41")){
+
+            intent = new Intent(ApiDashboardActivity.this,TransactionHistoryTestActivity.class);
+            startActivity(intent);
         }
+
 
     }
 }
+

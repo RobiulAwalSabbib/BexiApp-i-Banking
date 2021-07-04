@@ -18,12 +18,14 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.bcl.bexiapp_i_banking.Benificier_Single_Account_Get.Single_Account_Get_Data_Model;
 import com.bcl.bexiapp_i_banking.Transaction_Medium_Get_All_Data.TransactionMediumDataModel;
 import com.bcl.bexiapp_i_banking.Transaction_Medium_Get_All_Data.Transaction_Medium_Get_All_Data_Return_M;
 import com.bcl.bexiapp_i_banking.Transaction_Post.Transaction_Post_Receive_Model;
 import com.bcl.bexiapp_i_banking.Transaction_Post.Transaction_Post_Request_Model;
 import com.bcl.bexiapp_i_banking.Transaction_Type_Get_All_Data.TransactionTypeDataModel;
 import com.bcl.bexiapp_i_banking.Transaction_Type_Get_All_Data.Transaction_Type_Get_All_Data_Return_M;
+import com.bcl.bexiapp_i_banking.adapter.SpinAdapter_Single_Account_Get;
 import com.bcl.bexiapp_i_banking.adapter.SpinAdapter_TransactionMedium;
 import com.bcl.bexiapp_i_banking.adapter.SpinAdapter_TransactionType;
 import com.bcl.bexiapp_i_banking.customView.CustomAlert;
@@ -47,10 +49,10 @@ public class TransactionPostTestActivity extends AppCompatActivity {
 
     Button btn_transaction_post,btn_transaction_detail_get;
 ////// for spinner
-    Spinner sp_transction_medium,sp_transction_type;
+    Spinner sp_transction_medium,sp_transction_type,sp_receiver_acc;
    //String [] gender = {"-Select Gender-","Male","Female","Common"};
 
-    String transaction_medium,transaction_type;
+    String transaction_medium,transaction_type,benificier_acc;
 
     //Network call
     private ApiService apiService;
@@ -60,6 +62,7 @@ public class TransactionPostTestActivity extends AppCompatActivity {
     ////spinnerList
     List<TransactionTypeDataModel> transactionTypeList = new ArrayList<>();
     List<TransactionMediumDataModel> transactionMediumList = new ArrayList<>();
+    List<Single_Account_Get_Data_Model> accountList = new ArrayList<>();
 
 
     // You spinner view
@@ -69,6 +72,7 @@ public class TransactionPostTestActivity extends AppCompatActivity {
     // This is the object that is going to do the "magic"
     private SpinAdapter_TransactionType adapter;
     private SpinAdapter_TransactionMedium adapter2;
+    private SpinAdapter_Single_Account_Get adapter3;
 
     SharedPreferences session;
 
@@ -81,8 +85,10 @@ public class TransactionPostTestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_transaction_post_test);
 
         session = getSharedPreferences("app_session", MODE_PRIVATE);
+        String acno = session.getString("acNo", "0");
 
         et_sender_acc = findViewById(R.id.et_sender_acc);
+        et_sender_acc.setText(acno);
         et_receiver_acc = findViewById(R.id.et_receiver_acc);
         et_transaction_amount = findViewById(R.id.et_transaction_amount);
 //        et_transaction_medium = findViewById(R.id.et_transaction_medium);
@@ -93,6 +99,7 @@ public class TransactionPostTestActivity extends AppCompatActivity {
 
         sp_transction_medium = findViewById(R.id.sp_transction_medium);
         sp_transction_type = findViewById(R.id.sp_transction_type);
+        sp_receiver_acc = findViewById(R.id.sp_receiver_acc);
 
 
 
@@ -173,6 +180,26 @@ public class TransactionPostTestActivity extends AppCompatActivity {
                     }
                 });
 
+                sp_receiver_acc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                        // Here you get the current item (a User object) that is selected by its position
+                        Single_Account_Get_Data_Model accList = (Single_Account_Get_Data_Model) parent.getItemAtPosition(position);
+                        // Here you can do the action you want to...
+                        benificier_acc = accList.getBENI_ACC().toString();
+                        Log.e("benificier_acc",benificier_acc);
+
+
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+
+
 
 
                 if(sender_acc.isEmpty()){
@@ -180,12 +207,14 @@ public class TransactionPostTestActivity extends AppCompatActivity {
                     et_sender_acc.setError("Please Enter Your Account first!");
                     et_sender_acc.requestFocus();
 
-                }else if(receiver_acc.isEmpty()){
+                }
+                /*else if(receiver_acc.isEmpty()){
 
                     et_receiver_acc.setError("Please Enter Receiver Account first!");
                     et_receiver_acc.requestFocus();
 
-                }else if(transaction_amount.isEmpty()){
+                }*/
+                else if(transaction_amount.isEmpty()){
 
                     et_transaction_amount.setError("Please Enter Transaction Amount first!");
                     et_transaction_amount.requestFocus();
@@ -205,7 +234,7 @@ public class TransactionPostTestActivity extends AppCompatActivity {
 
                     Transaction_Post_Request_Model reqM = new Transaction_Post_Request_Model();
                     reqM.setSender_acc(sender_acc);
-                    reqM.setReceiver_acc(receiver_acc);
+                    reqM.setReceiver_acc(benificier_acc);
                     reqM.setTransaction_amount(transaction_amount);
 //                    reqM.setTransaction_medium(transaction_medium);
 //                    reqM.setTransaction_type(transaction_type);
@@ -247,6 +276,13 @@ public class TransactionPostTestActivity extends AppCompatActivity {
         get_Transaction_Medium();
 
         ////////////////////////////////////////////////////////////////////////////////////
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////// asyntask disposal network call for get_Benificier_Account_List   Spinner //////////////////
+
+        get_Benificier_Account_List(acno);
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     }
 
@@ -307,6 +343,79 @@ public class TransactionPostTestActivity extends AppCompatActivity {
                                     //Failed
                                     new CustomAlert().showErrorMessage(TransactionPostTestActivity.this, "", recM.getErrorMessage());
                                 }
+
+                            }
+
+                            @Override
+                            public void onError(Throwable e) {
+                                pDialog.dismiss();
+
+                                // Log.e(TAG, "onError: " + e.getMessage());
+                                ErrorUtil.showError(e, TransactionPostTestActivity.this);
+                            }
+                        }));
+
+
+
+    }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////// asyntask disposal network call for get_Benificier_Account_List   Spinner ///////////////////////////////////////
+
+    private void get_Benificier_Account_List(String acNo){
+
+        // pDialog.show();
+
+        disposable.add(
+                (Disposable) apiService
+
+                        //change 1
+                        .get_Benificiary_Single_Acc(acNo)
+
+
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribeWith(new DisposableSingleObserver<List<com.bcl.bexiapp_i_banking.Benificier_Single_Account_Get.ReceiveModel>>() {//change 2
+                            @Override
+                            public void onSuccess( List<com.bcl.bexiapp_i_banking.Benificier_Single_Account_Get.ReceiveModel> recM ) {//change 3
+
+                                pDialog.dismiss();
+
+                                //change 4
+                                //Receive  Result
+                                if (recM == null || recM.size() <1) {
+                                    //UnSuccessful
+
+                                    new CustomAlert().showErrorMessage(TransactionPostTestActivity.this, "", "No Data Found.....!");
+
+                                } else {
+                                    //Successful
+
+                                    for(int i=0; i < recM.size(); i++ ){
+
+                                        accountList.add(new Single_Account_Get_Data_Model(recM.get(i).getSlno()+"",
+                                                recM.get(i).getBeniAcc()+"",
+                                                recM.get(i).getRefAcc()+"",
+                                                recM.get(i).getAccType()+"",
+                                                recM.get(i).getAccTitle()+""));
+
+
+
+                                    }
+
+                                }
+
+
+                                // Initialize the adapter sending the current context
+                                // Send the simple_spinner_item layout
+                                // And finally send the Users array (Your data)
+                                adapter3 = new SpinAdapter_Single_Account_Get(TransactionPostTestActivity.this,
+                                        android.R.layout.simple_spinner_item,
+                                        accountList);
+                                sp_receiver_acc = (Spinner) findViewById(R.id.sp_receiver_acc);
+                                sp_receiver_acc.setAdapter(adapter3); // Set the custom adapter to the spinner
+                                // You can create an anonymous listener to handle the event when is selected an spinner item
+
+
 
                             }
 
